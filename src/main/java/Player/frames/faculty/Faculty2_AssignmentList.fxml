@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="112.0" layoutY="14.0" text="List of Assignments">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="new__assignment" layoutX="40.0" layoutY="54.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="New Assignment" />
+      <TableView fx:id="assignment_list" layoutX="40.0" layoutY="94.0" prefHeight="74.0" prefWidth="382.0">
+        <columns>
+          <TableColumn fx:id="assignment_title" prefWidth="130.40002059936523" text="Title" />
+          <TableColumn fx:id="assignment_criteria" prefWidth="149.59999084472656" text="Criteria" />
+            <TableColumn fx:id="assignment_rate" prefWidth="75.0" text="Rate" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

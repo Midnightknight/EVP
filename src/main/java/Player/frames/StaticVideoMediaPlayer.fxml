@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Player.playerController">
+   <children>
+      <Pane layoutX="14.0" layoutY="78.0" prefHeight="297.0" prefWidth="248.0" style="-fx-border-color: gray;">
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <children>
+            <ScrollBar layoutX="7.0" layoutY="36.0" orientation="VERTICAL" prefHeight="162.0" prefWidth="14.0" />
+            <Label fx:id="DefaultLabel1" layoutX="83.0" layoutY="36.0" text="Presentation" />
+            <Label fx:id="DefaultLabel2" layoutX="74.0" layoutY="90.0" text="Comprehension" />
+            <Label fx:id="DefaultLabel3" layoutX="64.0" layoutY="155.0" text="Audience Response" />
+            <Label fx:id="DefaultLabel4" layoutX="82.0" layoutY="220.0" text="Performance" />
+            <Label layoutX="82.0" layoutY="4.0" text="Rating System">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Slider fx:id="Slider2" layoutX="46.0" layoutY="107.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Slider fx:id="Slider1" layoutX="46.0" layoutY="53.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Slider fx:id="Slider3" layoutX="46.0" layoutY="172.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Slider fx:id="Slider4" layoutX="46.0" layoutY="237.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <TextField fx:id="Score1" layoutX="197.0" layoutY="53.0" prefHeight="14.0" prefWidth="27.0" />
+            <TextField fx:id="Score2" layoutX="197.0" layoutY="105.0" prefHeight="14.0" prefWidth="27.0" />
+            <TextField fx:id="Score3" layoutX="197.0" layoutY="164.0" prefHeight="14.0" prefWidth="27.0" />
+            <TextField fx:id="Score4" layoutX="197.0" layoutY="229.0" prefHeight="14.0" prefWidth="27.0" />
+         </children>
+      </Pane>
+      <Label fx:id="Ename" layoutX="80.0" layoutY="48.0" text="Name of Evaluatee">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Aname" layoutX="230.0" layoutY="14.0" text="Assignment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="Tname" layoutX="387.0" layoutY="47.0" text="Title of Video">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="279.0" layoutY="87.0" prefHeight="257.0" prefWidth="248.0">
+         <children>
+            <MediaView fx:id="videoPlayer" fitHeight="200.0" fitWidth="200.0" layoutX="24.0" />
+            <Slider fx:id="ProgressBar" layoutX="62.0" layoutY="200.0" />
+            <Button fx:id="PlayButton" layoutX="86.0" layoutY="214.0" mnemonicParsing="false" text="Play" />
+            <Button fx:id="PauseButton" layoutX="138.0" layoutY="214.0" mnemonicParsing="false" text="Pause" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="score" layoutX="538.0" layoutY="67.0" prefHeight="297.0" prefWidth="248.0" style="-fx-border-color: gray;">
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <children>
+            <Label layoutX="82.0" layoutY="4.0" text="Information">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutY="44.0" prefHeight="90.0" prefWidth="248.0" style="-fx-border-color: gray;">
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </opaqueInsets>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+               <children>
+                  <Label fx:id="student_name" layoutX="52.0" layoutY="5.0" text="Student Name" />
+                  <Label fx:id="project_title" layoutX="52.0" layoutY="33.0" text="Title of Project" />
+                  <Label layoutX="51.0" layoutY="60.0" text="Grade:" />
+                  <Label fx:id="grade" layoutX="101.0" layoutY="62.0" text="60/100" textFill="#0e1f4f">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="faculty_name" layoutX="48.0" layoutY="140.0" text="Faculty Name" />
+            <Label fx:id="faculty_class" layoutX="48.0" layoutY="170.0" text="Class" />
+            <Label fx:id="assignment" layoutX="47.0" layoutY="201.0" text="Assignment" />
+            <Label layoutX="46.0" layoutY="230.0" text="Due Date:" />
+            <Label fx:id="due_date" layoutX="110.0" layoutY="229.0" text="05/11/2021" textFill="#244c9c" />
+            <Label layoutX="45.0" layoutY="258.0" text="Due Time:" />
+            <Label fx:id="due_time" layoutX="110.0" layoutY="257.0" text="12 PM" textFill="#252a8c" />
+         </children>
+      </Pane>
+      <TextField fx:id="FixedComment" editable="false" layoutX="90.0" layoutY="420.0" prefHeight="127.0" prefWidth="627.0" />
+      <Label layoutX="309.0" layoutY="382.0" text="Faculty's Comments">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="189.0" layoutY="50.0" text="Sign In">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="89.0" text="Email">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="130.0" text="Password">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="151.0" layoutY="90.0" />
+      <TextField fx:id="pass" layoutX="151.0" layoutY="131.0" />
+      <Button fx:id="submit" layoutX="176.0" layoutY="175.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Submit" />
+      <Label layoutX="19.0" layoutY="11.0" text="Welcome to the Video Evaluation Program">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

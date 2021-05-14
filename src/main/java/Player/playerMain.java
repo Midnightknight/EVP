@@ -15,7 +15,7 @@ public class playerMain extends Application {
     public void start(Stage stage) throws Exception {
 
 
-        Parent root = FXMLLoader.load(getClass().getResource("EVP.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("frames/EVP.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Media Player");
         stage.setScene(scene);

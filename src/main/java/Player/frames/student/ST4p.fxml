@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="TitleLabel" layoutX="190.0" layoutY="54.0" text="Title of the Assignment">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="107.0" text="Grade: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gradeField" editable="false" layoutX="151.0" layoutY="109.0" prefHeight="27.0" prefWidth="57.0" promptText="grade" />
+      <Hyperlink fx:id="LinkToStaticEVP" layoutX="254.0" layoutY="109.0" text="Click here to view more details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="NotSatisfied" layoutX="248.0" layoutY="192.0" mnemonicParsing="false" text="Not Satisfied" />
+      <Label layoutX="169.0" layoutY="161.0" text="Click on this button if you are not satisfied with your grade." />
+      <Button fx:id="back" layoutX="264.0" layoutY="248.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>
