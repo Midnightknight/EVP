@@ -7,8 +7,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaView;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.*;
 import javafx.scene.web.HTMLEditor;
-
+import javafx.fxml.FXMLLoader;
 
 import java.io.File;
 
@@ -82,17 +83,14 @@ public class playerController{
     @FXML
     private Button BackButton;
 
-    //Instantiating the media field.
-    String Spath = "C:/Users/Kenneth/Videos/Twitch/Test.mp4";
 
-    //Instantiating Media Class
-    Media media = new Media(new File(Spath).toURI().toString());
-
-    //Instantiating media player
-    MediaPlayer mediaPlayer = new MediaPlayer(media);
 
     @FXML
-    public MediaView videoPlayer = new MediaView(mediaPlayer);
+    public MediaView videoPlayer;// = new MediaView(mediaPlayer);
+
+    public MediaView getVideoPlayer() {
+        return this.videoPlayer;
+    }
 
     @FXML
     private Slider ProgressBar;
