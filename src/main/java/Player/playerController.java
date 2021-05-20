@@ -7,9 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaView;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.*;
 import javafx.scene.web.HTMLEditor;
-import javafx.fxml.FXMLLoader;
 
 import java.io.File;
 
@@ -59,16 +57,14 @@ public class playerController{
 
     @FXML
     void onSliderChanged(javafx.scene.input.MouseEvent event) {
-        /*int sliderValue_1 = (int) Slider1.getValue();
-        int sliderValue_2= (int) Slider1.getValue();
-        int sliderValue_3= (int) Slider1.getValue();
-        int sliderValue_4= (int) Slider1.getValue();*/
-        //System.out.println(sliderValue_1 + " ");
         ScoreField_1.setText(Slider1.getValue() + " ");
+        int sliderValue_1 = (int) Slider1.getValue();
         ScoreField_2.setText(Slider2.getValue() + " ");
+        int sliderValue_2= (int) Slider1.getValue();
         ScoreField_3.setText(Slider3.getValue() + " ");
+        int sliderValue_3= (int) Slider1.getValue();
         ScoreField_4.setText(Slider4.getValue() + " ");
-
+        int sliderValue_4= (int) Slider1.getValue();
     }
 
     @FXML
@@ -83,13 +79,19 @@ public class playerController{
     @FXML
     private Button BackButton;
 
-
-
     @FXML
-    public MediaView videoPlayer;// = new MediaView(mediaPlayer);
+    private MediaView mediaView;
 
-    public MediaView getVideoPlayer() {
-        return this.videoPlayer;
+    public void setVideoPlayer(String Spath) {
+
+        //Instantiating Media Class
+        Media media = new Media(new File(Spath).toURI().toString());
+        //Instantiating media player
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+
+        mediaView.setMediaPlayer(mediaPlayer);
+        mediaPlayer.play();
     }
 
     @FXML
@@ -101,7 +103,6 @@ public class playerController{
     @FXML
     private Button PauseButton;
 
-    //Instantiating mediaView
 
 
 
